@@ -1,3 +1,17 @@
+# How to Install the SIMPLE Model Package
+
+To install the SIMPLE Model package directly from GitHub, follow these steps:
+
+1. **Install the `devtools` package** (if you haven't already):
+   ```r
+   install.packages("devtools")
+   ```
+2. **Install the `SIMPLEModel` package** :
+   ```r
+   devtools::install_github("dignatgr/SIMPLEModel")
+   ```
+
+
 # SIMPLE
 SIMPLE crop model from Zhao et al 2019
 
