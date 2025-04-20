@@ -2,6 +2,9 @@
 source('functions.R')
 
 # Example usage of the run_simple_model function
+# crop management parameter
+fSolar_max = 0.95 # for high density crop
+
 # Define input parameters for the model
 days <- 100  # Number of days for the simulation
 daily_temperatures <- runif(days, min = 5, max = 30)  # Simulated daily mean temperatures

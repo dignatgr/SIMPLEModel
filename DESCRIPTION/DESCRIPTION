@@ -1,0 +1,11 @@
+
+Package: SimpleModel
+Type: Package
+Title: Simple Model Package
+Version: 0.1.0
+Author: Your Name
+Maintainer: Your Name <your.email@example.com>
+Description: A simple R package for demonstration purposes.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true

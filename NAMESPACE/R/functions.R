@@ -114,7 +114,7 @@ run_simple_model <- function(days, daily_temperatures, daily_max_temperatures, d
     fSolar_value <- fSolar_water(fWater(ARID, Swater))
     
     # Calculate the daily biomass growth rate
-    Biomass_rate <- daily_radiation[i] * fSolar_value * RUE * fCO2(daily_CO2, SCO2) * fTemp(daily_temperatures[i], Tbase, Topt) * min(fHeat(daily_max_temperatures[i], Theat, Textreme), fWater(ARID, Swater))
+    Biomass_rate <- daily_radiation[i] * fSolar_value * RUE * fCO2(daily_CO2[i], SCO2) * fTemp(daily_temperatures[i], Tbase, Topt) * min(fHeat(daily_max_temperatures[i], Theat, Textreme), fWater(ARID, Swater))
     
     # Update cumulative biomass
     Biomass_cumi <- Biomass_cumi + Biomass_rate
