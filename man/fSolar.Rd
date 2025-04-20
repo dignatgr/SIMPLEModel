@@ -1,4 +1,3 @@
-
 \\name{fSolar}
 \\alias{fSolar}
 \\title{Calculate Fraction of Solar Radiation Intercepted}
@@ -21,4 +20,3 @@ fSolar(TT, I50A, I50B, Tsum, phase)
 \\examples{
   fSolar(500, 300, 700, 1000, "growth")
 }
-
