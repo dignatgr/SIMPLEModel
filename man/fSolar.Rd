@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 \\name{fSolar}
 \\alias{fSolar}
 \\title{Calculate Fraction of Solar Radiation Intercepted}
