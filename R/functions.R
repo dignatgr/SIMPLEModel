@@ -128,6 +128,7 @@ fSolar_water <- function(fWater_value) {
 #'
 #' This function calculates the fraction of solar radiation intercepted by a crop canopy during growth and senescence phases.
 #'
+#' @param fSolar_max planting density
 #' @param TT Thermal time.
 #' @param I50A Thermal time at which 50% of maximum interception occurs during growth phase.
 #' @param I50B Thermal time at which 50% of maximum interception occurs during senescence phase.
@@ -136,7 +137,7 @@ fSolar_water <- function(fWater_value) {
 #' @return Fraction of solar radiation intercepted by crop canopy during growth and senescence phases.
 #' @examples
 #' fSolar(500, 100, 200, 1000, "growth")
-fSolar <- function(TT, I50A, I50B, Tsum, phase) {
+fSolar <- function(fSolar_max = 0.5, TT, I50A, I50B, Tsum, phase) {
   if (phase == "growth") {
     return(fSolar_max * (1 - exp(-0.01 * (TT - I50A))))
   } else if (phase == "senescence") {
@@ -187,7 +188,7 @@ run_simple_model <- function(days, daily_temperatures, daily_max_temperatures, d
     phase <- ifelse(TTi < Tsum, "growth", "senescence")
     
     # Calculate the fraction of solar radiation intercepted
-    fSolar_value <- fSolar(TTi, I50A, I50B, Tsum, phase)
+    fSolar_value <- fSolar(fSolar_max = 0.5, TTi, I50A, I50B, Tsum, phase)
     
     # Calculate the ARID index for drought stress
     ARID <- calculate_ARID(daily_ETo[i], PAW)

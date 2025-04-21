@@ -4,9 +4,11 @@
 \alias{fSolar}
 \title{Calculate Fraction of Solar Radiation Intercepted by Crop Canopy During Growth and Senescence Phases}
 \usage{
-fSolar(TT, I50A, I50B, Tsum, phase)
+fSolar(fSolar_max = 0.5, TT, I50A, I50B, Tsum, phase)
 }
 \arguments{
+\item{fSolar_max}{planting density}
+
 \item{TT}{Thermal time.}
 
 \item{I50A}{Thermal time at which 50% of maximum interception occurs during growth phase.}
