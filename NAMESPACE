@@ -1,0 +1,10 @@
+
+export(calculate_cumulative_temperature)
+export(fTemp)
+export(fHeat)
+export(fCO2)
+export(calculate_ARID)
+export(fWater)
+export(fSolar_water)
+export(fSolar)
+export(run_simple_model)
